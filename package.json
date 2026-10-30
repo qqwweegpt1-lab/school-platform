@@ -1,0 +1,25 @@
+{
+  "name": "discipline-attendance-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "منصة الانضباط والمواظبة السلوكية — موقع مدرسي عربي (RTL) مع قاعدة بيانات SQLite ولوحة إدارة",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "start": "node src/server.ts",
+    "create-admin": "node src/cli/create-admin.ts",
+    "seed": "node src/cli/seed.ts",
+    "seed:clear": "node src/cli/seed.ts --clear",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 \"tests/*.test.ts\"",
+    "test:ui": "node tests/e2e/ui-smoke.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
